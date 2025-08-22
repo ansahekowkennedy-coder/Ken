@@ -1,0 +1,762 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPI42E9LdN/AaHHplZIUqrR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/ansahekowkennedy-coder/Ken/blob/main/Ansah%20Ekow%20Kennedy%20_UEB0509423\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "H2KqTWMS2DWr"
+      },
+      "outputs": [],
+      "source": [
+        " a. Create variables of different types my_integer = 10 Integer my_float = 3.14  Float my_string = \"Hello\"  String my_boolean = True  Boolean b. Print each variable with its type print(my_integer, type(my_integer)) print(my_float, type(my_float)) print(my_string, type(my_string)) print(my_boolean, type(my_boolean))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " a. Create variables of different types my_integer = 10 Integer my_float = 3.14  Float my_string = \"Hello\"  String my_boolean = True  Boolean b. Print each variable with its type print(my_integer, type(my_integer)) print(my_float, type(my_float)) print(my_string, type(my_string)) print(my_boolean, type(my_boolean))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 280
+        },
+        "id": "0dCXh-F42nHf",
+        "outputId": "206a0182-457a-48ba-ec32-f3825442aa37"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (ipython-input-2391426644.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipython-input-2391426644.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    a. Create variables of different types my_integer = 10 Integer my_float = 3.14  Float my_string = \"Hello\"  String my_boolean = True  Boolean b. Print each variable with its type print(my_integer, type(my_integer)) print(my_float, type(my_float)) print(my_string, type(my_string)) print(my_boolean, type(my_boolean))\u001b[0m\n\u001b[0m              ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def print_multiplication_table(number, limit):\n",
+        "    print(f\"Multiplication Table of {number}:\")\n",
+        "    for i in range(1, limit + 1):\n",
+        "        print(f\"{number} x {i} = {number * i}\")\n",
+        "    print()\n",
+        "\n",
+        "def main():\n",
+        "    numbers = input(\"Enter numbers separated by space: \")"
+      ],
+      "metadata": {
+        "id": "_KTzkY7m3hxf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def multiplication_table(n):\n",
+        " for x in range(1, 16):\n",
+        "     print(f'{n}×{x} = {n*x}')\n",
+        "num = int(input(\"Enter your number: \"))\n",
+        "multiplication_table(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-yQbaRLv3uLK",
+        "outputId": "efba5142-1c1c-4f91-adaf-755a10a8cad6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your number: 7\n",
+            "7×1 = 7\n",
+            "7×2 = 14\n",
+            "7×3 = 21\n",
+            "7×4 = 28\n",
+            "7×5 = 35\n",
+            "7×6 = 42\n",
+            "7×7 = 49\n",
+            "7×8 = 56\n",
+            "7×9 = 63\n",
+            "7×10 = 70\n",
+            "7×11 = 77\n",
+            "7×12 = 84\n",
+            "7×13 = 91\n",
+            "7×14 = 98\n",
+            "7×15 = 105\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import string\n",
+        "import re\n",
+        "import math\n",
+        "\n",
+        "# Task 1\n",
+        "def to_lowercase(s):\n",
+        "    return s.lower()\n",
+        "\n",
+        "# Task 2\n",
+        "def swap_case(s):\n",
+        "    return s.swapcase()\n",
+        "\n",
+        "# Task 3\n",
+        "def remove_uppercase(s):\n",
+        "    return ''.join([ch for ch in s if not ch.isupper()])\n",
+        "\n",
+        "# Task 4\n",
+        "def count_upper_lower(s):\n",
+        "    upper = sum(1 for ch in s if ch.isupper())\n",
+        "    lower = sum(1 for ch in s if ch.islower())\n",
+        "    return upper, lower\n",
+        "\n",
+        "# Task 5\n",
+        "def remove_non_letters(s):\n",
+        "    return ''.join([ch for ch in s if ch.isalpha()])\n",
+        "\n",
+        "# Task 6 - Heron's Formula\n",
+        "def triangle_area(a, b, c):\n",
+        "    s = (a + b + c) / 2\n",
+        "    area = math.sqrt(s * (s - a) * (s - b) * (s - c))\n",
+        "    return area\n",
+        "\n",
+        "# Task 7\n",
+        "def format_names(names):\n",
+        "    # Printing in left, right, and center align\n",
+        "    for name in names:\n",
+        "        print(name.ljust(15), \"|\", name.rjust(15), \"|\", name.center(15))\n",
+        "\n",
+        "# Task 8\n",
+        "def clean_string(s):\n",
+        "    # i. remove leading/trailing whitespace\n",
+        "    s = s.strip()\n",
+        "    # ii. remove punctuation\n",
+        "    s = s.translate(str.maketrans('', '', string.punctuation))\n",
+        "    # iii. remove all spaces\n",
+        "    s = s.replace(\" \", \"\")\n",
+        "    return s\n",
+        "\n",
+        "\n",
+        "# ---------------- TEST CASES ----------------\n",
+        "print(\"Task 1:\", to_lowercase(\"Hello\"))\n",
+        "print(\"Task 2:\", swap_case(\"HeLLo WoRLd\"))\n",
+        "print(\"Task 3:\", remove_uppercase(\"HelloWorld\"))\n",
+        "print(\"Task 4:\", count_upper_lower(\"EngiNEer\"))\n",
+        "print(\"Task 5:\", remove_non_letters(\"Data-Driven@2025!\"))\n",
+        "print(\"Task 6:\", triangle_area(3, 4, 5))\n",
+        "print(\"\\nTask 7:\")\n",
+        "format_names([\"Alice\", \"Bob\", \"Charlie\"])\n",
+        "print(\"\\nTask 8:\", clean_string(\"   Hello, World!   \"))"
+      ],
+      "metadata": {
+        "id": "9m5OF9Cu5VnM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "887c5645-dd6d-480f-c197-cff0dc135212"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Task 1: hello\n",
+            "Task 2: hEllO wOrlD\n",
+            "Task 3: elloorld\n",
+            "Task 4: (3, 5)\n",
+            "Task 5: DataDriven\n",
+            "Task 6: 6.0\n",
+            "\n",
+            "Task 7:\n",
+            "Alice           |           Alice |      Alice     \n",
+            "Bob             |             Bob |       Bob      \n",
+            "Charlie         |         Charlie |     Charlie    \n",
+            "\n",
+            "Task 8: HelloWorld\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Create variables of different types\n",
+        "integer_var = 10\n",
+        "float_var = 10.5\n",
+        "string_var = \"Hello\"\n",
+        "boolean_var = True\n",
+        "\n",
+        "# Print each variable with its type\n",
+        "print(f\"integer_var: {integer_var} is of type {type(integer_var)}\")\n",
+        "print(f\"float_var: {float_var} is of type {type(float_var)}\")\n",
+        "print(f\"string_var: {string_var} is of type {type(string_var)}\")\n",
+        "print(f\"boolean_var: {boolean_var} is of type {type(boolean_var)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oINflgM66fLD",
+        "outputId": "914813f5-a8f0-48e0-cef4-298d2a2c53c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "integer_var: 10 is of type <class 'int'>\n",
+            "float_var: 10.5 is of type <class 'float'>\n",
+            "string_var: Hello is of type <class 'str'>\n",
+            "boolean_var: True is of type <class 'bool'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Convert a float to an integer\n",
+        "float_to_convert = 19.99\n",
+        "integer_converted = int(float_to_convert)\n",
+        "print(f\"Float {float_to_convert} converted to integer is {integer_converted} which is of type {type(integer_converted)}\")\n",
+        "\n",
+        "# Convert an integer to a string\n",
+        "integer_to_convert = 50\n",
+        "string_converted = str(integer_to_convert)\n",
+        "print(f\"Integer {integer_to_convert} converted to string is '{string_converted}' which is of type {type(string_converted)}\")\n",
+        "\n",
+        "# Convert a string to a float\n",
+        "string_to_convert = \"123.45\"\n",
+        "float_converted = float(string_to_convert)\n",
+        "print(f\"String '{string_to_convert}' converted to float is {float_converted} which is of type {type(float_converted)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Yq7aQuDc6g2o",
+        "outputId": "e607ec1a-82f3-4800-b47a-432fb7d7f082"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Float 19.99 converted to integer is 19 which is of type <class 'int'>\n",
+            "Integer 50 converted to string is '50' which is of type <class 'str'>\n",
+            "String '123.45' converted to float is 123.45 which is of type <class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Take user's first and last name as input\n",
+        "first_name = input(\"Enter your first name: \")\n",
+        "last_name = input(\"Enter your last name: \")\n",
+        "\n",
+        "# Print the greeting message\n",
+        "print(f\"Hello, {first_name} {last_name}!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zF0ZeoHW6kA8",
+        "outputId": "57b5eb73-ed9d-43ce-c7a8-da52e8e220df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your first name: Ansah Ekow\n",
+            "Enter your last name: Kennedy \n",
+            "Hello, Ansah Ekow Kennedy !\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Ask the user for their favorite word\n",
+        "favorite_word = input(\"What's your favorite word? \")\n",
+        "\n",
+        "# Ask how many times to repeat it\n",
+        "repeat_count = int(input(\"How many times should I repeat it? \"))\n",
+        "\n",
+        "# Print the word the specified number of times, separated by spaces\n",
+        "print((favorite_word + \" \") * repeat_count)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "epQTvvWV6uYx",
+        "outputId": "6dd4c435-8f80-4c0b-c9b8-5e8bfe6fcd44"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "What's your favorite word? Grace\n",
+            "How many times should I repeat it? 20\n",
+            "Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace Grace \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "age = 20\n",
+        "print(\"You are \" + str(age) + \" years old.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8X7u4_CY64Ob",
+        "outputId": "abeac14b-6387-4005-8698-f348a202f556"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "You are 20 years old.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"('Hell' + 10)) -> B. TypeError\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9q1wekiA7kbS",
+        "outputId": "016d0d2f-0281-4d8d-e94e-83138d6e6c0a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "('Hell' + 10)) -> B. TypeError\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"(abc) -> A. ValueError\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gzdHP7kL7_iY",
+        "outputId": "53e6fda2-f799-4f9e-c31e-d82df825ee6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(abc) -> A. ValueError\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(' \"age\" + 10 -> B. TypeError')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fH7OJrZ58M-q",
+        "outputId": "e33de00f-256e-4e47-bd0d-35fdf8b09251"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " \"age\" + 10 -> B. TypeError\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"(age + 10) where age is not defined -> D. NameError\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vJeNhZT78hBb",
+        "outputId": "ddbb1cdb-a743-428f-f9de-9bc4f1e57f8a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(age + 10) where age is not defined -> D. NameError\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "\n",
+        "def guess_game():\n",
+        "    number_to_guess = random.randint(1, 100)\n",
+        "    attempts = 0\n",
+        "\n",
+        "    print(\"Welcome to the number guessing game!\")\n",
+        "    print(\"I'm thinking of a number between 1 and 100.\")\n",
+        "\n",
+        "    while True:\n",
+        "        try:\n",
+        "            user_guess = int(input(\"Guess a number: \"))\n",
+        "            attempts += 1\n",
+        "\n",
+        "            if user_guess < number_to_guess:\n",
+        "                print(\"Too low!\")\n",
+        "            elif user_guess > number_to_guess:\n",
+        "                print(\"Too high!\")\n",
+        "            else:\n",
+        "                print(f\"Congratulations! You guessed the number correctly in {attempts} attempts.\")\n",
+        "                break\n",
+        "        except ValueError:\n",
+        "            print(\"Invalid input. Please enter a number.\")\n",
+        "\n",
+        "def main():\n",
+        "    guess_game()\n",
+        "    play_again = input(\"Do you want to play again? (yes/no): \")\n",
+        "    if play_again.lower() == \"yes\":\n",
+        "        main()\n",
+        "    else:\n",
+        "        print(\"Thanks for playing!\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 862
+        },
+        "id": "8ojEm8sh9P5T",
+        "outputId": "6c07eb23-2951-4c47-d52a-756b86bf743a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Welcome to the number guessing game!\n",
+            "I'm thinking of a number between 1 and 100.\n",
+            "Guess a number: 7\n",
+            "Too low!\n",
+            "Guess a number: 70\n",
+            "Too high!\n",
+            "Guess a number: 15\n",
+            "Too high!\n",
+            "Guess a number: 87\n",
+            "Too high!\n",
+            "Guess a number: 65\n",
+            "Too high!\n",
+            "Guess a number: 54\n",
+            "Too high!\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipython-input-442638717.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     32\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     33\u001b[0m \u001b[0;32mif\u001b[0m \u001b[0m__name__\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"__main__\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 34\u001b[0;31m     \u001b[0mmain\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m/tmp/ipython-input-442638717.py\u001b[0m in \u001b[0;36mmain\u001b[0;34m()\u001b[0m\n\u001b[1;32m     24\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     25\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mmain\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 26\u001b[0;31m     \u001b[0mguess_game\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     27\u001b[0m     \u001b[0mplay_again\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Do you want to play again? (yes/no): \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     28\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0mplay_again\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlower\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m==\u001b[0m \u001b[0;34m\"yes\"\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/tmp/ipython-input-442638717.py\u001b[0m in \u001b[0;36mguess_game\u001b[0;34m()\u001b[0m\n\u001b[1;32m     10\u001b[0m     \u001b[0;32mwhile\u001b[0m \u001b[0;32mTrue\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     11\u001b[0m         \u001b[0;32mtry\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 12\u001b[0;31m             \u001b[0muser_guess\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Guess a number: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     13\u001b[0m             \u001b[0mattempts\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class PetroleumBase:\n",
+        "    \"\"\"A base class for petroleum engineering calculations.\"\"\"\n",
+        "    def __init__(self, name):\n",
+        "        self.name = name\n",
+        "\n",
+        "    def display_info(self):\n",
+        "        \"\"\"Prints a descriptive title for the calculation.\"\"\"\n",
+        "        print(f\"\\n--- {self.name} Calculation ---\")\n",
+        "\n",
+        "class Reservoir(PetroleumBase):\n",
+        "    \"\"\"\n",
+        "    Represents a reservoir and calculates its volume.\n",
+        "    Applies inheritance from PetroleumBase.\n",
+        "    \"\"\"\n",
+        "    def __init__(self, name, area, thickness, porosity, water_saturation):\n",
+        "        super().__init__(name)\n",
+        "        self.area = area\n",
+        "        self.thickness = thickness\n",
+        "        self.porosity = porosity\n",
+        "        self.water_saturation = water_saturation\n",
+        "\n",
+        "    def calculate_volume(self):\n",
+        "        \"\"\"Calculates the reservoir volume.\"\"\"\n",
+        "        try:\n",
+        "            if not all(isinstance(x, (int, float)) for x in [self.area, self.thickness, self.porosity, self.water_saturation]):\n",
+        "                raise TypeError(\"All reservoir parameters must be numbers.\")\n",
+        "            if self.porosity < 0 or self.porosity > 1 or self.water_saturation < 0 or self.water_saturation > 1:\n",
+        "                raise ValueError(\"Porosity and water saturation must be between 0 and 1.\")\n",
+        "\n",
+        "            self.display_info()\n",
+        "            volume = self.area * self.thickness * self.porosity * (1 - self.water_saturation)\n",
+        "            print(f\"Reservoir Volume: {volume:.2f}\")\n",
+        "            return volume\n",
+        "        except (TypeError, ValueError) as e:\n",
+        "            print(f\"Error calculating reservoir volume: {e}\")\n",
+        "            return None\n",
+        "\n",
+        "class Fluid(PetroleumBase):\n",
+        "    \"\"\"\n",
+        "    Represents a fluid and calculates its density.\n",
+        "    Demonstrates polymorphism through the 'calculate' method.\n",
+        "    \"\"\"\n",
+        "    def __init__(self, name, mass, volume):\n",
+        "        super().__init__(name)\n",
+        "        self.mass = mass\n",
+        "        self.volume = volume\n",
+        "\n",
+        "    def calculate(self):\n",
+        "        \"\"\"Calculates the fluid's density.\"\"\"\n",
+        "        try:\n",
+        "            if self.volume <= 0:\n",
+        "                raise ValueError(\"Volume must be a positive number.\")\n",
+        "            self.display_info()\n",
+        "            density = self.mass / self.volume\n",
+        "            print(f\"Fluid Density: {density:.2f}\")\n",
+        "            return density\n",
+        "        except (TypeError, ValueError) as e:\n",
+        "            print(f\"Error calculating fluid density: {e}\")\n",
+        "            return None\n",
+        "\n",
+        "class Well(PetroleumBase):\n",
+        "    \"\"\"\n",
+        "    Represents a well and calculates its productivity index.\n",
+        "    Demonstrates polymorphism through the 'calculate' method.\n",
+        "    \"\"\"\n",
+        "    def __init__(self, name, flow_rate, reservoir_pressure, wellbore_pressure):\n",
+        "        super().__init__(name)\n",
+        "        self.flow_rate = flow_rate\n",
+        "        self.reservoir_pressure = reservoir_pressure\n",
+        "        self.wellbore_pressure = wellbore_pressure\n",
+        "\n",
+        "    def calculate(self):\n",
+        "        \"\"\"Calculates the productivity index.\"\"\"\n",
+        "        try:\n",
+        "            pressure_diff = self.reservoir_pressure - self.wellbore_pressure\n",
+        "            if pressure_diff <= 0:\n",
+        "                raise ValueError(\"Reservoir pressure must be greater than wellbore pressure.\")\n",
+        "            self.display_info()\n",
+        "            pi = self.flow_rate / pressure_diff\n",
+        "            print(f\"Productivity Index: {pi:.2f}\")\n",
+        "            return pi\n",
+        "        except (TypeError, ValueError) as e:\n",
+        "            print(f\"Error calculating productivity index: {e}\")\n",
+        "            return None\n",
+        "\n",
+        "class AdvancedCalculations(Reservoir):\n",
+        "    \"\"\"\n",
+        "    Inherits from Reservoir to perform more complex calculations.\n",
+        "    Demonstrates inheritance and method overriding.\n",
+        "    \"\"\"\n",
+        "    def __init__(self, name, area, thickness, porosity, water_saturation, gas_fvol_factor):\n",
+        "        super().__init__(name, area, thickness, porosity, water_saturation)\n",
+        "        self.gas_fvol_factor = gas_fvol_factor\n",
+        "\n",
+        "    def calculate_ogip(self):\n",
+        "        \"\"\"Calculates the original gas in place (OGIP).\"\"\"\n",
+        "        try:\n",
+        "            if self.gas_fvol_factor <= 0:\n",
+        "                raise ValueError(\"Gas formation volume factor must be a positive number.\")\n",
+        "\n",
+        "            self.display_info()\n",
+        "            # Reusing the reservoir volume part of the formula\n",
+        "            net_rock_volume = self.area * self.thickness * self.porosity * (1 - self.water_saturation)\n",
+        "            ogip = 43560 * net_rock_volume / self.gas_fvol_factor\n",
+        "            print(f\"Original Gas in Place (OGIP): {ogip:.2f}\")\n",
+        "            return ogip\n",
+        "        except (TypeError, ValueError) as e:\n",
+        "            print(f\"Error calculating OGIP: {e}\")\n",
+        "            return None\n",
+        "\n",
+        "    def calculate_permeability(self, flow_rate, viscosity, length, pressure_drop):\n",
+        "        \"\"\"\n",
+        "        Calculates permeability using Darcy's Law.\n",
+        "        Demonstrates an additional method within an inherited class.\n",
+        "        \"\"\"\n",
+        "        try:\n",
+        "            if self.area <= 0 or pressure_drop <= 0:\n",
+        "                raise ValueError(\"Area and pressure drop must be positive numbers.\")\n",
+        "\n",
+        "            permeability = (flow_rate * viscosity * length) / (self.area * pressure_drop)\n",
+        "            print(f\"Permeability (Darcy's Law): {permeability:.2f}\")\n",
+        "            return permeability\n",
+        "        except (TypeError, ValueError) as e:\n",
+        "            print(f\"Error calculating permeability: {e}\")\n",
+        "            return None\n",
+        "\n",
+        "def main():\n",
+        "    \"\"\"Main function to run the demonstrations.\"\"\"\n",
+        "    # 1. Reservoir Volume Calculation (Inheritance & Basic Method)\n",
+        "    reservoir = Reservoir(\"Oilfield A\", area=50000, thickness=150, porosity=0.2, water_saturation=0.3)\n",
+        "    reservoir.calculate_volume()\n",
+        "\n",
+        "    # 2. Fluid Density Calculation (Polymorphism)\n",
+        "    oil = Fluid(\"Crude Oil\", mass=500, volume=0.55)\n",
+        "    oil.calculate()\n",
+        "\n",
+        "    # 3. Productivity Index Calculation (Polymorphism)\n",
+        "    well = Well(\"Well A1\", flow_rate=1500, reservoir_pressure=3000, wellbore_pressure=1800)\n",
+        "    well.calculate()\n",
+        "\n",
+        "    # 4. OGIP Calculation (Inheritance & Advanced Method)\n",
+        "    # The AdvancedCalculations class inherits from Reservoir\n",
+        "    gas_reservoir = AdvancedCalculations(\"Gas Field B\", area=75000, thickness=200, porosity=0.15, water_saturation=0.25, gas_fvol_factor=0.005)\n",
+        "    gas_reservoir.calculate_ogip()\n",
+        "\n",
+        "    # 5. Permeability Calculation (Additional Method)\n",
+        "    # Uses a method from the inherited class\n",
+        "    gas_reservoir.calculate_permeability(flow_rate=5000, viscosity=0.02, length=100, pressure_drop=200)\n",
+        "\n",
+        "    # --- Error Handling Demonstrations ---\n",
+        "    print(\"\\n--- Demonstrating Error Handling ---\")\n",
+        "\n",
+        "    # Invalid volume for Fluid Density\n",
+        "    bad_fluid = Fluid(\"Water\", mass=1000, volume=0)\n",
+        "    bad_fluid.calculate()\n",
+        "\n",
+        "    # Invalid pressure difference for Productivity Index\n",
+        "    bad_well = Well(\"Well B2\", flow_rate=1000, reservoir_pressure=2500, wellbore_pressure=2500)\n",
+        "    bad_well.calculate()\n",
+        "\n",
+        "    # Invalid porosity value for Reservoir Volume\n",
+        "    bad_reservoir = Reservoir(\"Faulty Reservoir\", area=100, thickness=10, porosity=1.2, water_saturation=0.1)\n",
+        "    bad_reservoir.calculate_volume()\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0Vq62P62-FpR",
+        "outputId": "0c32e6eb-350b-4497-ef55-9edded9a5a4c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "--- Oilfield A Calculation ---\n",
+            "Reservoir Volume: 1050000.00\n",
+            "\n",
+            "--- Crude Oil Calculation ---\n",
+            "Fluid Density: 909.09\n",
+            "\n",
+            "--- Well A1 Calculation ---\n",
+            "Productivity Index: 1.25\n",
+            "\n",
+            "--- Gas Field B Calculation ---\n",
+            "Original Gas in Place (OGIP): 14701500000000.00\n",
+            "Permeability (Darcy's Law): 0.00\n",
+            "\n",
+            "--- Demonstrating Error Handling ---\n",
+            "Error calculating fluid density: Volume must be a positive number.\n",
+            "Error calculating productivity index: Reservoir pressure must be greater than wellbore pressure.\n",
+            "Error calculating reservoir volume: Porosity and water saturation must be between 0 and 1.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
